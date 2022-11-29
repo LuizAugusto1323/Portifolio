@@ -1,0 +1,139 @@
+.contato {
+    background-color: #000;
+    color: #fff;
+}
+
+.rodape {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 20px;
+    margin: 0 auto;
+    gap: 100px;
+    align-items: center;
+}
+
+.convite{
+    font-family: "Crimson Text", Arial, sans-serif;
+    line-height: 1.1;
+    font-size: 2.2rem;
+    position: relative;
+    padding-top: 50px;
+}
+
+.convite::after{
+    content: " ";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    background: url('../img/coffee.svg') no-repeat center;
+    bottom: -40px;
+}
+.contato-tipo{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.icons{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 60px;
+}
+
+#github{
+    background: url('../img/github.svg') no-repeat center;
+}
+
+#in{
+    background: url('../img/linkedin.svg') no-repeat center;
+    left: 120px;
+}
+
+#email{
+    background: url('../img/email.svg') no-repeat center;
+    left: 240px;
+}
+
+.whats{
+    background: url('../img/whats.svg') no-repeat center;
+    left: 360px;
+}
+
+.whats p{
+    display: none;
+}
+
+.whats:hover p{
+    display: initial;
+    position: absolute;
+    left: -250px;
+    top: 100px;
+}
+
+.direitos{
+    font-size: 1.3rem;
+    color: #8a8a8a;
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 800px){
+    .rodape{
+        gap: 50px
+    }
+    .convite{
+        font-size: 1.8rem;
+        padding-top: 20px;
+    }
+    .contato-tipo{
+        font-size: 1.4rem;
+        padding-top: 30px;
+    }
+    #github{
+        background-size: 40px;
+    }
+    #in{
+        background-size: 40px;
+        left: 60px;
+    }
+
+    #email{
+        background-size: 40px;
+        left: 120px;
+    }
+    .whats{
+        background-size: 40px;
+        left: 180px;
+    }
+    .whats:hover p{
+        font-size: 1rem;
+        left: -100px;
+        top: 60px;
+    }
+}
+
+@media (max-width: 650px) {
+    .rodape{
+        grid-template-columns: 1fr;
+    }
+    .convite{
+        font-size: 1.3rem;
+        padding-top: 60px;
+    }
+    .contato-tipo{
+        font-size: 1.3rem;
+    }
+    .direitos {
+        font-size: 1rem;
+        margin-top: 50px;
+    }
+    .whats:hover p{
+        font-size: 1rem;
+        left: -120px;
+        top: -40px;
+    }
+}
